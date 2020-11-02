@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <WelcomeSection/>
-      <CareerSection/>
       <SideProject/>
+      <CareerSection/>
     </div>     
   );
 }

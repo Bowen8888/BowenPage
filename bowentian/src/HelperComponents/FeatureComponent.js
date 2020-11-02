@@ -8,13 +8,33 @@ export default class FeatureComponent extends Component {
         this.state = {
             title: props.title,
             status: props.status,
+            widthPercentage: props.widthPercentage,
             imgUrl: props.imgUrl
         }
+
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+      }
+      
+      componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+      }
+      
+      updateWindowDimensions() {
+        this.setState({ width: window.innerWidth* this.state.widthPercentage});
+      }
 
     render() {
         return (
-            <div className="FeatureContainer" >
+            <div className="FeatureContainer" style={{
+                width: this.state.width,
+                minHeight: this.state.width * 1.5,
+                maxHeight: this.state.width * 2
+            }}>
                 <div className="FeatureTitleContainer">
                     {this.state.title}
                 </div>

@@ -9,8 +9,8 @@
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     display: grid;
-    padding-top: 120px;
-    padding-left: 100px;
+    padding: 100px;
+    overflow: hidden;
 }
 
 .SectionLabelContainer {

@@ -6,12 +6,12 @@ import FeatureComponent from '../HelperComponents/FeatureComponent';
 export default class SideProject extends Component {
     constructor() {
         super();
-    }
-
+      }
+      
     render() {
         return (
             <div 
-                className="SectionContainer" 
+                className="SectionContainer SideProjectContainer" 
                 >
                     <div className="SectionLabelContainer">
                         <div>
@@ -21,10 +21,10 @@ export default class SideProject extends Component {
                             Mobile Game Development
                         </div>
                     </div>
-                    <div className="SideProjectItemList">
-                        <FeatureComponent title="Fisherman in Town" status="Released on iOS"/>
-                        <FeatureComponent title="EHost" status="Completed"/>
-                        <FeatureComponent title="Rosetta" status="Under development"/>
+                    <div className="SideProjectItemList"> 
+                        <FeatureComponent title="Fisherman in Town" status="Released on iOS" widthPercentage={0.2}/>
+                        <FeatureComponent title="EHost" status="Completed" widthPercentage={0.2}/>
+                        <FeatureComponent title="Rosetta" status="Under development" widthPercentage={0.2}/>
                     </div>
             </div>
         );
