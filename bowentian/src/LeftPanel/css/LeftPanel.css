@@ -1,0 +1,5 @@
+.LeftPanelContainer {
+    background-color: blue;
+    min-height: 100vh;
+    width: 500px;
+}

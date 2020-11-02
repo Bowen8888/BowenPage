@@ -1,0 +1,25 @@
+.WelcomeSectionContainer {
+    background-size: cover;
+    min-height: 50vh;
+    width: -webkit-fill-available;
+    display: grid;
+    justify-content: left;
+    padding-top: 120px;
+    padding-left: 100px;
+}
+
+.WelcomeSectionLabelContainer {
+    color: #65676b;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.WelcomeSectionSubLabelContainer {
+    font-size: 25px;
+}
+
+.CenterFit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
