@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/SideProject.css'
+import './css/MainPageSections.css'
 import FeatureComponent from '../HelperComponents/FeatureComponent';
 
 export default class SideProject extends Component {
@@ -10,13 +11,13 @@ export default class SideProject extends Component {
     render() {
         return (
             <div 
-                className="SideProjectContainer" 
+                className="SectionContainer" 
                 >
-                    <div className="SideProjectLabelContainer">
+                    <div className="SectionLabelContainer">
                         <div>
                             Side Projects
                         </div>
-                        <div className="SideProjectSubLabelContainer">
+                        <div className="SectionLabelContainer SectionSubLabelContainer">
                             Mobile Game Development
                         </div>
                     </div>

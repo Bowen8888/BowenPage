@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/WelcomeSection.css'
+import './css/MainPageSections.css'
 
 export default class WelcomeSection extends Component {
     constructor() {
@@ -9,18 +10,18 @@ export default class WelcomeSection extends Component {
     render() {
         return (
             <div 
-                className="WelcomeSectionContainer" 
+                className="SectionContainer" 
                 style={{
                     backgroundImage: "url(" + process.env.PUBLIC_URL + "images/WelcomeSectionBackground.jpeg" + ")"
                 }}>
-                    <div className="WelcomeSectionLabelContainer">
+                    <div className="SectionLabelContainer">
                         <div>
                             Bowen Tian
                             <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"} alt=""/>
                             <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
                             <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
                         </div>
-                        <div className="WelcomeSectionSubLabelContainer">
+                        <div className="SectionLabelContainer SectionSubLabelContainer">
                             Software Engineer
                         </div>
                     </div>
