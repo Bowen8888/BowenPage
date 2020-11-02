@@ -21,7 +21,6 @@ export default class WelcomeSection extends Component {
                             Software Engineer
                         </div>
                     </div>
-                    
             </div>
         );
     }

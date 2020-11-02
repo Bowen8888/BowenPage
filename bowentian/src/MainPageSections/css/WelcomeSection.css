@@ -1,9 +1,8 @@
 .WelcomeSectionContainer {
     background-size: cover;
-    min-height: 50vh;
+    min-height: 100vh;
     width: -webkit-fill-available;
     display: grid;
-    justify-content: left;
     padding-top: 120px;
     padding-left: 100px;
 }
