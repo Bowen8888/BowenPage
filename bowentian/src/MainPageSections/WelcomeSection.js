@@ -16,6 +16,9 @@ export default class WelcomeSection extends Component {
                     <div className="WelcomeSectionLabelContainer">
                         <div>
                             Bowen Tian
+                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"} alt=""/>
+                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
+                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
                         </div>
                         <div className="WelcomeSectionSubLabelContainer">
                             Software Engineer

@@ -22,3 +22,8 @@
     max-height: 100vh;
     margin: auto;
 }
+
+.SocialMediaIcon {
+    height: 15px;
+    margin-left: 10px;
+}
