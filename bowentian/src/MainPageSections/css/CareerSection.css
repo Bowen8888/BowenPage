@@ -1,0 +1,11 @@
+.ProfileContainer {
+    background-color: transparent;
+}
+
+.ProfileContainer > div {
+    margin-top: 40px;
+}
+
+.CareerSectionLabelContainer {
+    color: white;
+}

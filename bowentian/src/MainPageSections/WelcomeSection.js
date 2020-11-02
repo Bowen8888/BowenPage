@@ -16,13 +16,13 @@ export default class WelcomeSection extends Component {
                 }}>
                     <div className="SectionLabelContainer">
                         <div>
-                            Bowen Tian
+                            I am Bowen Tian
                             <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"} alt=""/>
                             <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
                             <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
                         </div>
                         <div className="SectionLabelContainer SectionSubLabelContainer">
-                            Software Engineer
+                            Welcome to my space!
                         </div>
                     </div>
             </div>

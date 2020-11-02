@@ -6,7 +6,7 @@
 
 .SectionContainer {
     background-size: cover;
-    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
     width: -webkit-fill-available;
     display: grid;
     padding-top: 120px;

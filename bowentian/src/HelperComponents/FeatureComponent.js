@@ -7,7 +7,8 @@ export default class FeatureComponent extends Component {
 
         this.state = {
             title: props.title,
-            status: props.status
+            status: props.status,
+            imgUrl: props.imgUrl
         }
     }
 
@@ -16,6 +17,13 @@ export default class FeatureComponent extends Component {
             <div className="FeatureContainer" >
                 <div className="FeatureTitleContainer">
                     {this.state.title}
+                </div>
+                <div
+                style={{
+                    backgroundImage: "url(" + process.env.PUBLIC_URL + "images/Onedesk.jpg" + ")"
+                }}
+                >
+
                 </div>
                 <div className="FeatureStatusContainer">
                     {this.state.status}
