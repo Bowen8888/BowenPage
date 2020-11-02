@@ -21,12 +21,10 @@ export default class SideProject extends Component {
                         </div>
                     </div>
                     <div className="SideProjectItemList">
-                        <FeatureComponent/>
-                        <FeatureComponent/>
-                        <FeatureComponent/>
+                        <FeatureComponent title="Fisherman in Town" status="Released on iOS"/>
+                        <FeatureComponent title="EHost" status="Completed"/>
+                        <FeatureComponent title="Rosetta" status="Under development"/>
                     </div>
-                    
-                    
             </div>
         );
     }

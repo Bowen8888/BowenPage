@@ -9,3 +9,12 @@
     justify-content: space-between;
     padding: 20px;
 }
+
+.FeatureTitleContainer {
+    color: black;
+}
+
+.FeatureStatusContainer {
+    color: green;
+    text-align: right;
+}
