@@ -16,13 +16,19 @@ export default class WelcomeSection extends Component {
                 }}>
                     <div className="SectionLabelContainer">
                         <div>
-                            I am Bowen Tian
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"} alt=""/>
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
+                            Bowen Tian
+                            <a href="https://linkedin.com/in/bowen-tian" target="_blank"> 
+                                <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"} alt=""/>
+                            </a>
+                            <a href="https://github.com/Bowen8888" target="_blank"> 
+                                <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
+                            </a>
+                            <a href="https://github.com/Bowen8888" target="_blank"> 
+                                <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
+                            </a>
                         </div>
                         <div className="SectionLabelContainer SectionSubLabelContainer">
-                            Welcome to my space!
+                            Welcome to my space
                         </div>
                     </div>
             </div>

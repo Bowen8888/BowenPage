@@ -1,5 +1,7 @@
 .ProfileContainer {
     background-color: transparent;
+    display: flex;
+    justify-content: center;
 }
 
 .ProfileContainer > div {

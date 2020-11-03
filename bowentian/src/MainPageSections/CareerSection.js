@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './css/MainPageSections.css'
 import './css/CareerSection.css'
-import FeatureComponent from '../HelperComponents/FeatureComponent';
 import ImageViewComponent from '../HelperComponents/ImageViewComponent';
+import TransparentTextComponent from '../HelperComponents/TransparentTextComponent';
 
 export default class CareerSection extends Component {
     constructor() {
@@ -24,8 +24,16 @@ export default class CareerSection extends Component {
                         </div>
                     </div>
                     <div className="ProfileContainer">
-                        <ImageViewComponent title="Onedesk" imgUrl="images/Onedesk.jpg"/>
+                        <ImageViewComponent title="Onedesk Software Inc" imgUrl="images/Onedesk.jpg"/>
+                        <TransparentTextComponent/>
                     </div>
+                    <div className="ProfileContainer">
+                        <ImageViewComponent title="Ideal Inc" imgUrl="images/Ideal.png"/>
+                        <TransparentTextComponent/>
+                    </div>
+
+                    {/* • Cofounded a gaming company and designed the backend structure for our mobile strategy game using C# and Unity.
+• Raised three thousand dollars and entered the semifinal in the McGill Dobson Cup. */}
             </div>
         );
     }
