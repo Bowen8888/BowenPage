@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TypingEffect from '../Effects/TypingEffect';
+import Terminal from '../FancyComponents/Terminal';
 import './css/WelcomeSection.css'
 import './css/MainPageSections.css'
 
@@ -15,21 +15,22 @@ export default class WelcomeSection extends Component {
                 style={{
                     backgroundImage: "url(" + process.env.PUBLIC_URL + "images/WelcomeSectionBackground.jpeg" + ")"
                 }}>
+                <div className="WelcomeSectionCorner">
+                    <a href="https://linkedin.com/in/bowen-tian" target="_blank">
+                        <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"}
+                             alt=""/>
+                    </a>
+                    <a href="https://github.com/Bowen8888" target="_blank">
+                        <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
+                    </a>
+                    <a href="https://github.com/Bowen8888" target="_blank">
+                        <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
+                    </a>
+                </div>
                 <div className="SectionLabelContainer">
-                    <div>
-                        Bowen Tian
-                        <a href="https://linkedin.com/in/bowen-tian" target="_blank">
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"}
-                                 alt=""/>
-                        </a>
-                        <a href="https://github.com/Bowen8888" target="_blank">
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
-                        </a>
-                        <a href="https://github.com/Bowen8888" target="_blank">
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
-                        </a>
+                    <div className="WelcomeSectionTerminal">
+                        <Terminal/>
                     </div>
-                    <TypingEffect/>
                 </div>
             </div>
         );

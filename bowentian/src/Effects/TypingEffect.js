@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import '../MainPageSections/css/MainPageSections.css'
+import './css/TypeEffect.css'
 
-const words = ["Hello welcome to my space.", "I am Bowen."];
+const words = ["Hi welcome to my space.", "Something about me?", "I'm a Software Developer at Onedesk Software Inc."];
 
 export default function TypingEffect() {
     const [index, setIndex] = useState(0);
@@ -45,7 +45,7 @@ export default function TypingEffect() {
     }, [blink, enableBlink]);
 
     return (
-        <div className="SectionSubLabelContainer">
+        <div className="TypeEffectText">
             {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
         </div>
     );
