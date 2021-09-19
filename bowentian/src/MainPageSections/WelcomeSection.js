@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Terminal from '../FancyComponents/Terminal';
+import ProgrammingPie from '../FancyComponents/ProgrammingPie';
 import './css/WelcomeSection.css'
 import './css/MainPageSections.css'
 
@@ -27,11 +27,7 @@ export default class WelcomeSection extends Component {
                         <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
                     </a>
                 </div>
-                <div className="SectionLabelContainer">
-                    <div className="WelcomeSectionTerminal">
-                        <Terminal/>
-                    </div>
-                </div>
+              <ProgrammingPie/>
             </div>
         );
     }

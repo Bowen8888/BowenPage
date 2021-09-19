@@ -29,7 +29,7 @@ export default function TypingEffect() {
 
         const timeout = setTimeout(() => {
             setSubIndex((prev) => prev + (reverse ? -1 : 1));
-        }, Math.max(reverse ? 75 : subIndex === words[index].length ? 1000 : 70, 100));
+        }, Math.max(reverse ? 20 : subIndex === words[index].length ? 1000 : 40, 100));
 
         return () => clearTimeout(timeout);
     }, [subIndex, index, reverse]);
