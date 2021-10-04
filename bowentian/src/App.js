@@ -5,15 +5,17 @@ import WelcomeSection from './MainPageSections/WelcomeSection'
 import SkillsSection from './MainPageSections/SkillsSection';
 import SideProject from './MainPageSections/SideProject'
 import CareerSection from './MainPageSections/CareerSection';
+import ContactSection from "./MainPageSections/ContactSection";
 
 function App() {
   return (
-    <div>
+    <div id="app">
       <WelcomeSection/>
       <SkillsSection/>
       <SideProject/>
       <CareerSection/>
-    </div>     
+      <ContactSection/>
+    </div>
   );
 }
 

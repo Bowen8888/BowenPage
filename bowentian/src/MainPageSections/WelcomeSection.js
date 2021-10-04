@@ -10,25 +10,25 @@ export default class WelcomeSection extends Component {
 
     render() {
         return (
-            <div className="BlurComponentParent SectionContainer">
-                    <div className="BlurBackGround WelcomeBackground"  style={{
-                        backgroundImage: "url(" + process.env.PUBLIC_URL + "images/WelcomeSectionBackground.jpeg" + ")"
-                    }}>
-                </div>
+            <div className="BlurComponentParent SectionContainer DefaultBackground">
+                {/*<div className="BlurBackGround WelcomeBackground" style={{*/}
+                {/*    backgroundImage: "url(" + process.env.PUBLIC_URL + "images/WelcomeSectionBackground.jpeg" + ")"*/}
+                {/*}}>*/}
+                {/*</div>*/}
 
-                    <div className="WelcomeSectionCorner">
-                        <a href="https://linkedin.com/in/bowen-tian" target="_blank">
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"}
-                                alt=""/>
-                        </a>
-                        <a href="https://github.com/Bowen8888" target="_blank">
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
-                        </a>
-                        <a href="https://github.com/Bowen8888" target="_blank">
-                            <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
-                        </a>
-                    </div>
-                <ProgrammingPie/>
+                <div className="WelcomeSectionCorner">
+                    <a href="https://linkedin.com/in/bowen-tian" target="_blank">
+                        <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/linkedin.png"}
+                             alt=""/>
+                    </a>
+                    <a href="https://github.com/Bowen8888" target="_blank">
+                        <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/github.png"} alt=""/>
+                    </a>
+                    <a href="https://github.com/Bowen8888" target="_blank">
+                        <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
+                    </a>
+                </div>
+                {/*<ProgrammingPie/>*/}
             </div>
         );
     }

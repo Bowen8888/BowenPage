@@ -11,7 +11,7 @@ export default class SideProject extends Component {
     render() {
         return (
             <div 
-                className="SectionContainer SideProjectContainer" 
+                className="SectionContainer SideProjectContainer DefaultBackground"
                 >
                     <div className="SectionLabelContainer">
                         <div>
