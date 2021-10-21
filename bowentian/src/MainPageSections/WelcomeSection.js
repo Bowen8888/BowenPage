@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ProgrammingPie from '../FancyComponents/ProgrammingPie';
 import './css/WelcomeSection.css'
 import './css/MainPageSections.css'
+import AvatarComponent from "../HelperComponents/AvatarComponent";
 
 export default class WelcomeSection extends Component {
     constructor() {
@@ -28,7 +29,17 @@ export default class WelcomeSection extends Component {
                         <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "images/gmail.png"} alt=""/>
                     </a>
                 </div>
-                {/*<ProgrammingPie/>*/}
+                <div className="PersonalSection">
+                    <AvatarComponent>
+
+                    </AvatarComponent>
+                    <div className="Name">
+
+                    </div>
+                    <div className="ProgrammingPieContainer">
+                        <ProgrammingPie/>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -1,21 +1,29 @@
 .SocialMediaIcon {
-    height: 15px;
-    margin-right: 10px;
-    cursor: pointer;
+	height: 15px;
+	margin-right: 10px;
+	cursor: pointer;
 }
 
 .WelcomeSectionTerminal {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .WelcomeSectionCorner {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 16px;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	margin-top: 16px;
 }
 
 .WelcomeBackground {
-  filter: blur(10px);
+	filter: blur(10px);
+}
+
+.PersonalSection {
+	display: flex;
+}
+
+.ProgrammingPieContainer {
+	width: 50%;
 }
