@@ -9,7 +9,8 @@ export default class FeatureComponent extends Component {
             title: props.title,
             status: props.status,
             widthPercentage: props.widthPercentage,
-            imgUrl: props.imgUrl
+            imgUrl: props.imgUrl,
+            imgBorderColor: props.imgBorderColor == null ? "white" : props.imgBorderColor
         }
 
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -38,9 +39,10 @@ export default class FeatureComponent extends Component {
                 <div className="FeatureTitleContainer">
                     {this.state.title}
                 </div>
-                <div
+                <div className="FeatureImage"
                 style={{
-                    backgroundImage: "url(" + process.env.PUBLIC_URL + "images/Onedesk.jpg" + ")"
+                    backgroundImage: "url(" + process.env.PUBLIC_URL + this.state.imgUrl + ")",
+                    borderColor: this.state.imgBorderColor
                 }}
                 >
 

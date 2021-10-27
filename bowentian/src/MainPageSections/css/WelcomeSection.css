@@ -22,6 +22,7 @@
 
 .PersonalSection {
 	display: flex;
+	justify-content: center;
 }
 
 .ProgrammingPieContainer {

@@ -33,13 +33,11 @@ export default class WelcomeSection extends Component {
                     <AvatarComponent>
 
                     </AvatarComponent>
-                    <div className="Name">
-
-                    </div>
-                    <div className="ProgrammingPieContainer">
-                        <ProgrammingPie/>
-                    </div>
+                    
                 </div>
+                <div className="ProgrammingPieContainer">
+                        {/* <ProgrammingPie/> */}
+                    </div>
             </div>
         );
     }
