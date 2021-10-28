@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
 import './css/TypeEffect.css'
 
-const words = ["Hi welcome to my space.", "Something about me?", "I'm a Software Developer at Onedesk Software Inc."];
+const words = ["Hi welcome to my space.", 
+"I'm a Software Developer at Onedesk Software Inc.",
+"I enjoy making mobile games and websites in my spare time."];
 
 export default function TypingEffect() {
     const [index, setIndex] = useState(0);

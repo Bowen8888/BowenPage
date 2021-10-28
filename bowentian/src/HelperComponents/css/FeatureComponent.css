@@ -18,6 +18,12 @@
     text-align: right;
 }
 
+.FeatureImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .FeatureImage {
     height: 100px;
     width: 100px;
@@ -25,4 +31,8 @@
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: 1px solid;
+}
+
+.FeatureTextContentContainer {
+    color: black;
 }

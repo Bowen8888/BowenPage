@@ -10,7 +10,8 @@ export default class FeatureComponent extends Component {
             status: props.status,
             widthPercentage: props.widthPercentage,
             imgUrl: props.imgUrl,
-            imgBorderColor: props.imgBorderColor == null ? "white" : props.imgBorderColor
+            imgBorderColor: props.imgBorderColor == null ? "white" : props.imgBorderColor,
+            textContent: props.textContent
         }
 
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -39,6 +40,7 @@ export default class FeatureComponent extends Component {
                 <div className="FeatureTitleContainer">
                     {this.state.title}
                 </div>
+                <div className="FeatureImageContainer">
                 <div className="FeatureImage"
                 style={{
                     backgroundImage: "url(" + process.env.PUBLIC_URL + this.state.imgUrl + ")",
@@ -46,6 +48,10 @@ export default class FeatureComponent extends Component {
                 }}
                 >
 
+                </div>
+                </div>
+                <div className="FeatureTextContentContainer">
+                    {this.state.textContent}
                 </div>
                 <div className="FeatureStatusContainer">
                     {this.state.status}
