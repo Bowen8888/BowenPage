@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/BowenPage/static/css/main.f08f143c.chunk.css",
-    "main.js": "/BowenPage/static/js/main.ca34f958.chunk.js",
-    "main.js.map": "/BowenPage/static/js/main.ca34f958.chunk.js.map",
+    "main.css": "/BowenPage/static/css/main.b3744c7a.chunk.css",
+    "main.js": "/BowenPage/static/js/main.0852204f.chunk.js",
+    "main.js.map": "/BowenPage/static/js/main.0852204f.chunk.js.map",
     "runtime-main.js": "/BowenPage/static/js/runtime-main.5189e262.js",
     "runtime-main.js.map": "/BowenPage/static/js/runtime-main.5189e262.js.map",
-    "static/js/2.00285062.chunk.js": "/BowenPage/static/js/2.00285062.chunk.js",
-    "static/js/2.00285062.chunk.js.map": "/BowenPage/static/js/2.00285062.chunk.js.map",
+    "static/js/2.9b022cd3.chunk.js": "/BowenPage/static/js/2.9b022cd3.chunk.js",
+    "static/js/2.9b022cd3.chunk.js.map": "/BowenPage/static/js/2.9b022cd3.chunk.js.map",
     "index.html": "/BowenPage/index.html",
-    "static/css/main.f08f143c.chunk.css.map": "/BowenPage/static/css/main.f08f143c.chunk.css.map",
-    "static/js/2.00285062.chunk.js.LICENSE.txt": "/BowenPage/static/js/2.00285062.chunk.js.LICENSE.txt",
+    "static/css/main.b3744c7a.chunk.css.map": "/BowenPage/static/css/main.b3744c7a.chunk.css.map",
+    "static/js/2.9b022cd3.chunk.js.LICENSE.txt": "/BowenPage/static/js/2.9b022cd3.chunk.js.LICENSE.txt",
     "static/media/logo.103b5fa1.svg": "/BowenPage/static/media/logo.103b5fa1.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5189e262.js",
-    "static/js/2.00285062.chunk.js",
-    "static/css/main.f08f143c.chunk.css",
-    "static/js/main.ca34f958.chunk.js"
+    "static/js/2.9b022cd3.chunk.js",
+    "static/css/main.b3744c7a.chunk.css",
+    "static/js/main.0852204f.chunk.js"
   ]
 }
