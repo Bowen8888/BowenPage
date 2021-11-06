@@ -12,7 +12,7 @@ export default class SkillsSection extends Component {
         return (
             <div className="BlurComponentParent SectionContainer">
                 <div className="BlurBackGround" style={{
-                backgroundImage: "url(" + process.env.PUBLIC_URL + "images/CodeBackground.jpg" + ")"
+                backgroundImage: "url(" + process.env.PUBLIC_URL + "/images/CodeBackground.jpg" + ")"
             }}>
 
                 </div>

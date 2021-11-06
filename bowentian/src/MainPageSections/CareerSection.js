@@ -13,7 +13,7 @@ export default class CareerSection extends Component {
         return (
             <div 
                 className="SectionContainer" style={{
-                    backgroundImage: "url(" + process.env.PUBLIC_URL + "images/CareerSection.jpg" + ")"
+                    backgroundImage: "url(" + process.env.PUBLIC_URL + "/images/CareerSection.jpg" + ")"
                 }}>
                     <div className="SectionLabelContainer CareerSectionLabelContainer">
                         <div>
@@ -28,7 +28,7 @@ export default class CareerSection extends Component {
                         <TransparentTextComponent/>
                     </div>
                     <div className="ProfileContainer">
-                        <ImageViewComponent title="Ideal Inc" imgUrl="images/Ideal.png"/>
+                        <ImageViewComponent title="Ideal Inc" imgUrl="/images/Ideal.png"/>
                         <TransparentTextComponent/>
                     </div>
 

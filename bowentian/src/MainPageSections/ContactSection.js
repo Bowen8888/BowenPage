@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './css/MainPageSections.css'
-import './css/ContactSection.css'
+import './css/CareerSection.css'
 
 export default class ContactSection extends Component {
     constructor() {
@@ -9,10 +9,8 @@ export default class ContactSection extends Component {
 
     render() {
         return (
-            <div className="SectionContainer DefaultBackground ContactSectionContainer">
-                <div>
-                    <div>Send me a message.</div>  
-                </div>
+            <div className="SectionContainer DefaultBackground">
+                <div>Send me a message.</div>
             </div>
         );
     }
