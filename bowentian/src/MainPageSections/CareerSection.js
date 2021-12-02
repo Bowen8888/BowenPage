@@ -24,7 +24,7 @@ export default class CareerSection extends Component {
                         </div>
                     </div>
                     <div className="ProfileContainer">
-                        <ImageViewComponent title="Onedesk Software Inc" imgUrl="images/Onedesk.jpg"/>
+                        <ImageViewComponent title="Onedesk Software Inc" imgUrl="/images/Onedesk.jpg"/>
                         <TransparentTextComponent/>
                     </div>
                     <div className="ProfileContainer">
