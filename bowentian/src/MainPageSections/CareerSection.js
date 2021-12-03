@@ -19,12 +19,9 @@ export default class CareerSection extends Component {
                         <div>
                             Career
                         </div>
-                        <div className="SectionLabelContainer SectionSubLabelContainer CareerSectionLabelContainer">
-                            Software Engineer at Onedesk
-                        </div>
                     </div>
                     <div className="ProfileContainer">
-                        <ImageViewComponent title="Onedesk Software Inc" imgUrl="/images/Onedesk.jpg"/>
+                        <ImageViewComponent title="OneDesk Software Inc"/>
                         <TransparentTextComponent> 
                         </TransparentTextComponent>
                     </div>

@@ -1,5 +1,4 @@
 .ImageViewContainer {
-    background-color: #fff;
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
     box-shadow: 1px 2px 6px 1px rgba(0,0,0,.3);
@@ -10,6 +9,8 @@
     background-size: cover;
     height: 300px;
     width: 600px;
+    background-color: rgba(0,0,0,.5);
+
 }
 
 .ImageViewTitleContainer {

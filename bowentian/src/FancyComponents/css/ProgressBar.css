@@ -1,15 +1,32 @@
+.ProgressBarContainer {
+    display: flex;
+    align-items: center;
+}
+
+.ProgressBarLabel {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    width: 100px;
+}
+
 .ProgressBarBackground {
     background-color: white;
     color: white;
     width: 80%;
     border-radius: 15px;
+    height: 20px;
+    overflow: hidden;
 }
 
 .ProgressBarBarSection {
     background-color: rgb(116, 194, 92);
     color: white;
-    padding: 1%;
     text-align: right;
+    line-height: 1em;
     font-size: 20px;
-    border-radius: 15px;
+    border-radius: 0 2px 2px 0px;
+    height: 100%;
+    padding-right: 10px;
 }

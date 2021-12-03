@@ -13,11 +13,7 @@ export default class ImageViewComponent extends Component {
 
     render() {
         return (
-            <div className="ImageViewContainer" 
-                style={{
-                    backgroundImage: "url(" + process.env.PUBLIC_URL + this.state.imgUrl + ")"
-                }}
-            >
+            <div className="ImageViewContainer">
                 <div className="ImageViewTitleContainer">
                     {this.state.title}
                 </div>

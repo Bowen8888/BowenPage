@@ -7,7 +7,8 @@ export default class ProgressBar extends Component {
         super();
 
         this.state = {
-            progress: props.progress
+            progress: props.progress,
+            label: props.label
         }
 
     }
@@ -15,6 +16,9 @@ export default class ProgressBar extends Component {
     render() {
         return (
             <div className="ProgressBarContainer">
+                <div className="ProgressBarLabel">
+                    {this.state.label}
+                </div>
                 <div className="ProgressBarBackground">
                     <div className="ProgressBarBarSection" style={{
                         width: this.state.progress
