@@ -3,7 +3,6 @@ import './css/MainPageSections.css'
 import './css/CareerSection.css'
 import ImageViewComponent from '../HelperComponents/ImageViewComponent';
 import TransparentTextComponent from '../HelperComponents/TransparentTextComponent';
-import CareerProgression from '../FancyComponents/CareerProgression';
 
 export default class CareerSection extends Component {
     constructor() {
@@ -27,7 +26,6 @@ export default class CareerSection extends Component {
                     <div className="ProfileContainer">
                         <ImageViewComponent title="Onedesk Software Inc" imgUrl="/images/Onedesk.jpg"/>
                         <TransparentTextComponent> 
-                            <CareerProgression></CareerProgression>
                         </TransparentTextComponent>
                     </div>
             </div>
