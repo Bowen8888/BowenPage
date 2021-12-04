@@ -23,6 +23,11 @@ export default class ContactSection extends Component {
 
         return (
             <div className="SectionContainer DefaultBackground ContactSectionContainer">
+                <div className="SectionLabelContainer CareerSectionLabelContainer">
+                    <div>
+                        Contact
+                    </div>
+                </div>
                 <form onSubmit={sendEmail}>
                     <div className="row pt-5 mx-auto">
                           <textarea className="form-control ContactSectionTextArea" id=""
