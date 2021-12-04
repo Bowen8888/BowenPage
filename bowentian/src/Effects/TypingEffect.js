@@ -1,11 +1,21 @@
 import React, {useState, useEffect} from "react";
 import './css/TypeEffect.css'
 
-const words = ["Hi welcome to my space. \n This is a website I created in my spare time. I also make games and applications."
-    + "", 
-    "Let's talk about something else. Do you like horror movies? I do. Especially the ones about Zombies. I watched a lot of zombie"
-    + "related works.",
-"My next project is to make a website for my dog. I think her life is short, so I hope she is remembered."];
+const words = ["Hi welcome to my space :D.",
+    "I created this page in my spare time.",
+    "It's not finished yet.",
+    "I also like making mobile games.", 
+    "They are listed below.",
+    "What else do I like?",
+    "I am a zombie enthusiast.",
+    "Don't worry.",
+    "I mean zombie movie, TV series, and anime.",
+    "What's my next project?",
+    "I'm about to make a website for my dog!",
+    "I think her life is short, so I hope she is remembered somehow.",
+    "You realized this prompt goes forever?",
+    "Nah just kidding. Keep scrolling."
+];
 
 export default function TypingEffect() {
     const [index, setIndex] = useState(0);
