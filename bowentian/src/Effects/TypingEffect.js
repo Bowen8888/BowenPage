@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import './css/TypeEffect.css'
 
-const words = ["Hi welcome to my space.", 
-"I'm a Software Developer at Onedesk Software Inc.",
-"I enjoy making mobile games and websites in my spare time."];
+const words = ["Hi welcome to my space. \n This is a website I created in my spare time. I also make games and applications."
+    + "", 
+    "Let's talk about something else. Do you like horror movies? I do. Especially the ones about Zombies. I watched a lot of zombie"
+    + "related works.",
+"My next project is to make a website for my dog. I think her life is short, so I hope she is remembered."];
 
 export default function TypingEffect() {
     const [index, setIndex] = useState(0);
@@ -47,7 +49,9 @@ export default function TypingEffect() {
     }, [blink, enableBlink]);
 
     return (
-        <div className="TypeEffectText">
+        <div className="TypeEffectText" style={{
+            whiteSpace: "pre-line"
+        }}>
             {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
         </div>
     );
