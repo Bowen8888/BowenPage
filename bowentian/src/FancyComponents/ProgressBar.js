@@ -8,7 +8,8 @@ export default class ProgressBar extends Component {
 
         this.state = {
             progress: props.progress,
-            label: props.label
+            label: props.label,
+            content: props.content
         }
 
     }
@@ -23,7 +24,7 @@ export default class ProgressBar extends Component {
                     <div className="ProgressBarBarSection" style={{
                         width: this.state.progress
                     }}>
-                        {this.state.progress}
+                        {this.state.content}
                     </div>
                 </div>
             </div>

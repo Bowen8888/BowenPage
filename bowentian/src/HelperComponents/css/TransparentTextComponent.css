@@ -4,7 +4,7 @@
     border-top-right-radius: 4px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
     background-size: cover;
     height: 300px;

@@ -3,6 +3,13 @@
     flex-direction: column;
 }
 
+.CareerProgressionLabel {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
 .bg-CareerBar {
     background-color: #123445!important;
 }

@@ -11,12 +11,14 @@ export default class CareerProgression extends Component {
     render() {
         return (
             <div className="CareerProgressionContainer">
-                <ProgressBar label="Core Java" progress="85%"/>
-                <ProgressBar label="GWT" progress="85%"/>
-                <ProgressBar label="Hibernate" progress="85%"/>
-                <ProgressBar label="Spring framework" progress="85%"/>
-                <ProgressBar label="Firebase" progress="85%"/>
-                <ProgressBar label="Angular" progress="85%"/>
+                <div className="CareerProgressionLabel">
+                    Skills
+                </div>
+                <ProgressBar label="Server" progress="88%" content="Java, Spring, GWT, Hibernate"/>
+                <ProgressBar label="Client" progress="71%" content="GWT, React.js, Typescript, CSS, HTML"/>
+                <ProgressBar label="Database" progress="65%" content="PostgresSQL, Liquibase, Hibernate, Firebase"/>
+                <ProgressBar label="Version Control" progress="81%" content="Github, Subversion"/>
+                <ProgressBar label="Tools" progress="73%" content="Maven, Postman, IntelliJ IDEA, Chrome debugger"/>
             </div>
         );
     }
