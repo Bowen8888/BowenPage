@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import WelcomeSection from './MainPageSections/WelcomeSection'
 import SkillsSection from './MainPageSections/SkillsSection';

@@ -5,15 +5,12 @@ import ImageViewComponent from '../HelperComponents/ImageViewComponent';
 import TransparentTextComponent from '../HelperComponents/TransparentTextComponent';
 
 export default class CareerSection extends Component {
-    constructor() {
-        super();
-    }
 
     render() {
         return (
             <div 
                 className="SectionContainer" style={{
-                    backgroundImage: "url(" + process.env.PUBLIC_URL + "/images/CareerSection.jpg" + ")"
+                    backgroundImage: "url(" + process.env.PUBLIC_URL + "/images/CareerSection.jpg)"
                 }}>
                     <div className="SectionLabelContainer CareerSectionLabelContainer">
                         <div>

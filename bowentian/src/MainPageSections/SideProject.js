@@ -4,9 +4,6 @@ import './css/MainPageSections.css'
 import FeatureComponent from '../HelperComponents/FeatureComponent';
 
 export default class SideProject extends Component {
-    constructor() {
-        super();
-      }
       
     render() {
         return (

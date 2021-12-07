@@ -1,24 +1,11 @@
 import React, {Component} from 'react';
 import './css/MainPageSections.css';
 import './css/ContactSection.css';
-import emailjs from "emailjs-com";
 import { v4 as uuidv4 } from 'uuid';
 import { getFirestore, doc, setDoc, Timestamp } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDNdvAhOShIilxTE2McBwyhgFO_55Wed_A",
-  authDomain: "bowenpage-3bc48.firebaseapp.com",
-  projectId: "bowenpage-3bc48",
-  storageBucket: "bowenpage-3bc48.appspot.com",
-  messagingSenderId: "298307101532",
-  appId: "1:298307101532:web:4e8e403eb5dbc0aef71799"
-};
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
 const db = getFirestore();
-
 
 export default class ContactSection extends Component {
     constructor() {
@@ -36,13 +23,6 @@ export default class ContactSection extends Component {
     sendEmail(e) {
         e.preventDefault();
 
-        // emailjs.sendForm('service_44nuhq2', 'template_5em7z8a', e.target, 'user_aMG6OWs4B2oNCbq2nGVNl')
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
-        // e.target.reset()
         let message = {
             id: uuidv4(),
             content: this.state.textAreaContent,

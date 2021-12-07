@@ -4,9 +4,6 @@ import ProgressBar from './ProgressBar';
 
 
 export default class CareerProgression extends Component {
-    constructor() {
-        super();
-    }
 
     render() {
         return (

@@ -3,9 +3,6 @@ import TypingEffect from '../Effects/TypingEffect';
 import './css/Terminal.css'
 
 export default class Terminal extends Component {
-    constructor() {
-        super();
-    }
 
     render() {
         return (
