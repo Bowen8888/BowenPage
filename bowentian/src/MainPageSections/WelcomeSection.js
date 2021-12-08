@@ -15,8 +15,8 @@ export default class WelcomeSection extends Component {
                     <a href="https://github.com/Bowen8888" target="_blank" rel="noreferrer">
                         <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "/images/github.png"} alt=""/>
                     </a>
-                    <a href="https://github.com/Bowen8888" target="_blank" rel="noreferrer">
-                        <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "/images/gmail.png"} alt=""/>
+                    <a href="https://www.facebook.com/bowen.tian.169" target="_blank">
+                        <img className="SocialMediaIcon" src={process.env.PUBLIC_URL + "/images/facebook.png"} alt=""/>
                     </a>
                 </div>
                 <div className="PersonalSection">
