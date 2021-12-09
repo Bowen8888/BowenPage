@@ -2,10 +2,8 @@ import React, {Component} from 'react';
 import './css/MainPageSections.css';
 import './css/ContactSection.css';
 import { v4 as uuidv4 } from 'uuid';
-import { getFirestore, doc, setDoc, Timestamp } from "firebase/firestore";
-
-// Initialize Firebase
-const db = getFirestore();
+import { doc, setDoc, Timestamp } from "firebase/firestore";
+import db from "../index"
 
 export default class ContactSection extends Component {
     constructor() {
@@ -29,7 +27,11 @@ export default class ContactSection extends Component {
             created: Timestamp.now()
         };
         const cityRef = doc(db, 'messages', message.id);
-        setDoc(cityRef, message, { merge: true });
+        setDoc(cityRef, message, {merge: true}).then(r => {
+
+        }).catch(e => {
+            console.log(e)
+        });
     }
 
     render() {
