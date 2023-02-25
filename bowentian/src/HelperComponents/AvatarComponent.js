@@ -69,7 +69,7 @@ Z"/> */}
              />
 		</div>
 </div> */}
-                <div className="Name">Bowen Tian • McGill • OneDesk</div>
+                <div className="Name">Bowen Tian • McGill • TS Imagine Inc</div>
             </div>
             
         );

@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, createRef} from 'react';
 import './css/MainPageSections.css';
 import './css/ContactSection.css';
-import { v4 as uuidv4 } from 'uuid';
-import { doc, setDoc, Timestamp } from "firebase/firestore";
-import db from "../index"
+import emailjs from '@emailjs/browser';
 
 export default class ContactSection extends Component {
     constructor() {
@@ -12,29 +10,35 @@ export default class ContactSection extends Component {
         this.state = { textAreaContent: "" };
         this.handleTextAreaChange = this.handleTextAreaChange.bind(this);
         this.sendEmail = this.sendEmail.bind(this);
+        this.form = createRef();
     }
 
     handleTextAreaChange(e) {
-        this.setState({textAreaContent: e.target.value});
+        if (this.textAreaContent !== e.target.value) {
+            this.setState({textAreaContent: e.target.value});
+        }
     }
-
     sendEmail(e) {
         e.preventDefault();
+        const msg = this.state.textAreaContent;
 
-        let message = {
-            id: uuidv4(),
-            content: this.state.textAreaContent,
-            created: Timestamp.now()
-        };
-        const cityRef = doc(db, 'messages', message.id);
-        setDoc(cityRef, message, {merge: true}).then(r => {
+        //validate 
+        if (msg) {
+        //clean 
+            emailjs.sendForm('service_zgfbs35', 'template_o6xhzb8', this.form.current, 'pyCDUboPFC-ut6HVx')
+            .then((result) => {
+                // show the user a success message
+                this.setState({textAreaContent:''});
+            }, (error) => {
+                // show the user an error
+                console.log(error)
 
-        }).catch(e => {
-            console.log(e)
-        });
+            });
+        }
     }
 
     render() {
+
         return (
             <div className="SectionContainer DefaultBackground ContactSectionContainer">
                 <div className="SectionLabelContainer CareerSectionLabelContainer">
@@ -42,9 +46,14 @@ export default class ContactSection extends Component {
                         Contact
                     </div>
                 </div>
-                <form onSubmit={this.sendEmail}>
+                {/* <div className="row pt-5 mx-auto">
+                    <textarea className="form-control ContactSectionTextArea" id="" value={this.state.textAreaContent}
+                                placeholder="Send me a message." name="message" onChange={this.handleTextAreaChange}/>
+                    <div onClick={this.sendEmail}  className="btn btn-info ContactSectionSendButton">Send</div>
+                </div> */}
+                <form ref={this.form} onSubmit={this.sendEmail}>
                     <div className="row pt-5 mx-auto">
-                          <textarea className="form-control ContactSectionTextArea" id=""
+                          <textarea className="form-control ContactSectionTextArea" id="" value={this.state.textAreaContent}
                                     placeholder="Send me a message." name="message" onChange={this.handleTextAreaChange}/>
                         <input type="submit" className="btn btn-info ContactSectionSendButton" value="Send"/>
                     </div>
