@@ -13,9 +13,9 @@ export default class CareerProgression extends Component {
                 </div>
                 <ProgressBar label="Server" progress="88%" content="Java, Spring, GWT, Hibernate"/>
                 <ProgressBar label="Client" progress="71%" content="GWT, React.js, Typescript, CSS, HTML"/>
-                <ProgressBar label="Database" progress="65%" content="PostgresSQL, Liquibase, Hibernate, Firebase"/>
+                <ProgressBar label="Database" progress="65%" content="PostgresSQL, Firebase, MySQL"/>
                 <ProgressBar label="Version Control" progress="81%" content="Github, Subversion"/>
-                <ProgressBar label="Tools" progress="73%" content="Maven, Postman, IntelliJ IDEA, Chrome debugger, PGAdmin"/>
+                <ProgressBar label="Tools" progress="73%" content="Maven, Postman, IntelliJ, Debugger, Docker"/>
             </div>
         );
     }

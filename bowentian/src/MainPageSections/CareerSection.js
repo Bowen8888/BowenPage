@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './css/MainPageSections.css'
 import './css/CareerSection.css'
-import ImageViewComponent from '../HelperComponents/ImageViewComponent';
+import CareerListComponent from '../HelperComponents/CareerListComponent';
 import TransparentTextComponent from '../HelperComponents/TransparentTextComponent';
 
 export default class CareerSection extends Component {
@@ -18,7 +18,13 @@ export default class CareerSection extends Component {
                         </div>
                     </div>
                     <div className="ProfileContainer">
-                        <ImageViewComponent title="OneDesk Software Inc"/>
+                        <CareerListComponent career1={{
+                            name: "OneDesk Software Inc",
+                            year: "Feb 2018 - Jan 2021"
+                        }} career2={{
+                            name: "TS Imagine",
+                            year: "Jan 2021 - Present"
+                        }} />
                         <TransparentTextComponent> 
                         </TransparentTextComponent>
                     </div>
