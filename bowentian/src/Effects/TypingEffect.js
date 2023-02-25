@@ -1,19 +1,15 @@
 import React, {useState, useEffect} from "react";
 import './css/TypeEffect.css'
 
-const words = ["Hi welcome to my space :D.",
+const words = ["Hi welcome to my page!",
     "I created this page in my spare time.",
     "It's not finished yet.",
     "I also like making mobile games.", 
     "They are listed below.",
-    "What else do I like?",
-    "I am a zombie enthusiast.",
-    "Don't worry.",
-    "I mean zombie movie, TV series, and anime.",
-    "What's my next project?",
-    "I'm about to make a website for my dog!",
-    "I think her life is short, so I hope she is remembered somehow.",
-    "You realized this prompt goes forever?",
+    "What is my current project?",
+    "I'm working together with an influencer on a new app!",
+    "Whichès     goal is to keep young people motivated and help them find their passion.",
+    "Have you realized that this goes forever?",
     "Nah just kidding. Keep scrolling."
 ];
 
