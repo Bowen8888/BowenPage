@@ -32,7 +32,7 @@ export default class AvatarComponent extends Component {
         return (
             <div className="AvatarComponentContainer">
                 <div className="AvatarContainer" style={{
-                    backgroundImage: "url(" + process.env.PUBLIC_URL + "/images/Profile.jpg)"
+                    backgroundImage: "url(" + process.env.PUBLIC_URL + "/images/OfficeProfile.jpg)"
                 }}>
                 </div>
 
