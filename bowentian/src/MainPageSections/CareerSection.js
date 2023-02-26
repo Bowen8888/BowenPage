@@ -20,10 +20,10 @@ export default class CareerSection extends Component {
                     <div className="ProfileContainer">
                         <CareerListComponent career1={{
                             name: "OneDesk Software Inc",
-                            year: "Feb 2018 - Jan 2021"
+                            year: "Feb 2018 - Jan 2022"
                         }} career2={{
                             name: "TS Imagine",
-                            year: "Jan 2021 - Present"
+                            year: "Jan 2022 - Present"
                         }} />
                         <TransparentTextComponent> 
                         </TransparentTextComponent>
