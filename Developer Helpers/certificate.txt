@@ -1,0 +1,10 @@
+import the key from tsbox/auth to your java path 
+	cd into tsbox2 because .crt is in tsbox2/auth
+	keytool -importcert -file auth/dev.tradingscreen.com.crt -keystore "C:\Users\btian\.jdks\temurin-11.0.22\lib\security\cacerts"
+	the password should be "changeit"
+
+delete the key if the alias existed already
+	keytool -delete -noprompt -trustcacerts -alias "mykey" -keystore "C:\Users\btian\.sdkman\candidates\java\17.0.7-tem\lib\security\cacerts"
+
+view existing keys
+	keytool -list -v -keystore  "C:\Users\btian\.jdks\corretto-17.0.7\lib\security\cacerts"

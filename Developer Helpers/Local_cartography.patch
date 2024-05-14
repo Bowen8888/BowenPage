@@ -1,0 +1,21 @@
+Index: server/src/main/docker/docker.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/src/main/docker/docker.xml b/server/src/main/docker/docker.xml
+--- a/server/src/main/docker/docker.xml	(revision b14ffd628a83155371554ef2ae7da099420e56ac)
++++ b/server/src/main/docker/docker.xml	(date 1652207636116)
+@@ -2,6 +2,12 @@
+ <assembly>
+     <fileSets>
+         <fileSet>
++            <!-- directory where your cartography is -->
++            <directory>C:\Users\btian\Documents\cartography</directory>
++            <!-- where it will go in the container, DO NOT CHANGE -->
++            <outputDirectory>cartography</outputDirectory>
++        </fileSet>
++        <fileSet>
+             <directory>src/main/bedlam/templates/prop</directory>
+             <outputDirectory>prop</outputDirectory>
+         </fileSet>

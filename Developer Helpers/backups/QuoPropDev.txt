@@ -1,0 +1,459 @@
+if defined(sysprop("dev.ide"))
+    def IDE = true
+fi
+
+def appRootDir = require("C:/Users/btian/install")
+def installDir = require("C:/Users/btian/install/versions/quo-app-24.2.21-SNAPSHOT/instances/1-a")
+def installName = require("quo-1-a")
+
+def env_log_dir = require("C:/Users/btian/install/log")
+def env_lib_dir = require("C:/Users/btian/install/versions/quo-app-24.2.21-SNAPSHOT/instances/1-a/lib")
+def env_data_dir = require("C:/Users/btian/install/data/quo-1-a")
+def env_prop_dir = require("C:/Users/btian/install/versions/quo-app-24.2.21-SNAPSHOT/instances/1-a/prop")
+def env_upload_dir = "C:\Users\btian\install/data/quo-1-a/upload"
+
+def portcullisURL = require("tunnel://localhost:8001")
+def puffinURL = !defined(overrideRoutes) ? "puffin://puffin:1" : require("{%puffinURL}")
+def tsarinaURL = !defined(overrideRoutes) ? "ticktalk://tsarina:1" : require("{%tsarinaURL}")
+def discoURL = !defined(overrideRoutes) ? "static://disco:1" : require("{%discoURL}")
+def amoebaURL = !defined(overrideRoutes) ? "static://amoeba-a:1" : require("{%amoeba-a-URL}")
+def sesameURL = !defined(overrideRoutes) ? "static://sesame:1" : require("{%sesameURL}")
+def sherlockApiURL = require("http://localhost:32051/sherlock-api")
+def staffaUsURL = require("{%staffa_US_URL}", "ticktalk://puffin:puffin123@us-staffa:9299")
+def staffaEuURL = require("{%staffa_EU_URL}", "ticktalk://puffin:puffin123@eu-staffa:9299")
+def bestDealerApiURL = require("http://localhost:32151/bestdealer-api")
+
+def port = require("8090")
+def sslPort = require("0")
+def externalSslPort = require("0")
+def keyStoreFile = require("quo-app/keystore.jks")
+def keyStorePassword = require("")
+def httpCache = require("false")
+def httpSecurity = true
+def environment = require("DEV")
+def app_wars = require("quo-app|quo-webclient")
+
+def algo_enabled_brokers = "*"
+
+def tsom_timeout = require("30")
+
+def support_portal_url = require("https://ny-portal.uatdev.tradingscreen.com/")
+def tableau_url = require("https://bi.uatdev.tradingscreen.com/")
+def tableau_report_audit = require("#/views/Audit/OrderAudit?:tsid=$ORDERID")
+
+def ssoRedirect = require("https://localhost:8090")
+def vontobel_saml_properties = "C:\Users\btian\install\versions\quo-app-24.2.23-SNAPSHOT\instances\1-a/prop" + "/vontobel.saml.properties"
+def vontobel_logout_url = require("https://a2-login.vontobel.com/auth-appl/logout?Location=https%3A%2F%2Fa2-login.vontobel.com%2Fprelogininfo%2FACPT2_Browser_Square_Maintenance.html")
+def vontobel_operator_saml_properties = "C:\Users\btian\install\versions\quo-app-24.2.23-SNAPSHOT\instances\1-a/prop" + "/vontobel_operator.saml.properties"
+def vontobel_operator_logout_url = require("")
+def varo_saml_properties = "C:\Users\btian\install\versions\quo-app-24.2.23-SNAPSHOT\instances\1-a/prop" + "/varo.saml.properties"
+def varo_logout_url = require("https://tbd.varo.com", "https://www.varoenergy.com/")
+
+def fx_brokers_available = ""
+
+enableLowMemoryDetection=true
+enableThreadDumpToDatabase=true
+disableMonitoring=true
+
+metrics.graphiteURL=tcp://graphite.dev.tradingscreen.com:20003
+metrics.serviceName=quo
+metrics.serviceInstance={@installName}
+metrics.environment={@environment}
+metrics.enableSLF4JReporting=true
+metrics.SLF4JReportingInterval=15
+#graphite is enabled when metrics.graphiteURL is specified
+metrics.graphiteReportingInterval=1
+
+# Which pages not to cache
+CacheFilter.noCachePaths=/,/login,/welcome,/index.html,/watchlists,/blotters,/newPortfolio,/portfolio,/sso/5580,/sso/5580/metadata,/sso/5580/acs,/sso/5580/sls,/sso/5580/query
+
+# Event Conflation
+DefaultEsperDataSubscription.eventConflationIntervalMillis=250
+DefaultUserEsperState.forexConflationIntervalMillis=10000
+DefaultPortfolioBlotterService.marketDataConflationIntervalMillis=1000
+
+SessionMaxTimeMinutes=900
+
+# toolbox-elasticmetrics configuration
+elmetrics.logStashURL=tcp://ny2-laa-005.dev.tradingscreen.com:6350
+elmetrics.serviceName=quo
+elmetrics.serviceInstance={@installName}
+elmetrics.environment={@environment}
+elmetrics.logStashReportingInterval=10
+
+data-dir={@env_data_dir}
+upload-dir={@env_upload_dir}
+ensure-directories={@env_data_dir}|{@env_log_dir}|{@env_upload_dir}
+app-wars={@app_wars}
+lib-dir={@env_lib_dir}
+
+googleAnalyticsAccount=UA-46910113-6
+supportEmail=support@tradingscreen.com
+
+port={@port}
+sslPort={@sslPort}
+externalSslPort={@externalSslPort}
+upstreamAddress={%upstreamAddress}
+keyStoreFile={@keyStoreFile}
+keyStorePassword={@keyStorePassword}
+# Set this to the host name that browsers are going to connect using. For example "quo.tradingscreen.com"
+# this is used to prevent host header manipulation.
+httpHost=ts05766:8090,localhost:8090/
+httpCache={@httpCache}
+httpSecurity={@httpSecurity}
+
+# Which brokers do we allow to load algos for, separate by comma
+algoEnabledBrokers={@algo_enabled_brokers}
+strategies.forceUpgradeTo1_1=true
+
+serviceProperties.name={@installName}
+serviceProperties.appName=quo
+serviceProperties.environment={@environment}
+
+nagios.hostname=nagios
+nagios.connector.URL=tcp://nagios:1801
+nagios.shutdown.enabled=true
+nagios.service.name={@installName}
+
+# Google Cloud Platform project
+googleProjectName=crypto-migration-dev
+googleApplicationCredentials=/app/auth/crypto-quo-app-sa@crypto-uatdev-app.iam.gserviceaccount.com.json
+googleProxyHost=
+googleProxyPort=
+
+staffa.us-staffa.serverPool.servers.1.URL={@staffaUsURL}
+# if you want to go thru Portcullis uncomment the to lines below
+#staffa.us-staffa.serverPool.servers.1.URL=ticktalk://puffin:puffin123@us-staffa:1
+#staffa.us-staffa.serverPool.socketFactoryName=staffa
+staffa.us-staffa.queueControl.alertLatency=NEVER
+staffa.us-staffa.queueControl.purgeLatency=5 minutes
+staffa.eu-staffa.serverPool.servers.1.URL={@staffaEuURL}
+# if you want to go thru Portcullis uncomment the to lines below
+#staffa.eu-staffa.serverPool.servers.1.URL=ticktalk://puffin:puffin123@eu-staffa:1
+#staffa.eu-staffa.serverPool.socketFactoryName=staffa
+staffa.eu-staffa.queueControl.alertLatency=NEVER
+staffa.eu-staffa.queueControl.purgeLatency=5 minutes
+
+portcullisURL={@portcullisURL}
+amoebaURL={@amoebaURL}
+puffinURL={@puffinURL}
+tsarinaURL={@tsarinaURL}
+sesameURL={@sesameURL}
+discoURL={@discoURL}
+sherlockApiURL={@sherlockApiURL}
+bestDealerApiURL={@bestDealerApiURL}
+
+# Maximum content size in a XHR request used in channelServlet (remember that we use gzip on the HTTP connection)
+defaultMaxXHRMessageSize = 655360
+
+# Specify the default language locale used for formatting
+platformEnforcedLanguageLocale=en-US
+
+# Optionally specify the venue to use for benchmark products to get the right pricing feed
+benchmark-venueId=OTC
+
+# Specify the venue to use for platform indicative pricing feed
+indicative-venueId=IND
+
+# Specify the Branch Id to use for FX price subject template resolution
+QuoPriceSubjectNormalizer.FxPriceSubjectBranch=0001
+permissions.checkHistoricalPricing=false
+
+auction-venueId=
+crossing-venueId=TDX
+
+username=FINextService
+password={PBEWithMD5AndDES}GAtXng0UJaQ/4s8ojPBWVG3cadMTE8Wk
+passwordFile={%passwordFile}
+
+# Specify the service operating hours in UTC
+# Format is: startWorkingDay-startWorkingHours;endWorkingDay-endWorkingHours
+# Working days are to be given values from 1 to 7 where 1 being Monday and so on till 7 being Sunday
+# Working hours are to be given in HH:mm:ss format only
+# Magic string "ALWAYS" means that we never show the downtime screen
+# def service_operating_hours_in_utc = require("{%service-operating-hours-in-utc}", "7-17:00:00;6-01:00:00")
+def service_operating_hours_in_utc = "ALWAYS"
+serviceOperatingHoursInUTC={@service_operating_hours_in_utc}
+
+# Specify the timeout in seconds to wait for the first message from TSOM
+def tsom_first_message_timeout = require("5")
+tsomFirstMessageTimeout={@tsom_first_message_timeout}
+
+tsom.timeout={@tsom_timeout}
+
+support.portal.url={@support_portal_url}
+tableau.url={@tableau_url}
+tableau.report.audit={@tableau_report_audit}
+
+productFile=/gs1.csv
+clientLogFileName=quo-webclient.log
+
+# Enable NCSA request logging
+ncsa.log.enabled=false
+ncsa.log.append=false
+ncsa.log.extended=true
+ncsa.log.retaindays=1
+ncsa.log.file={@env_log_dir}/{@installName}-ncsa-request.log
+
+# if specified this will enable tube audit file
+tube.auditorFileName= {@env_log_dir}/{@installName}.cdb
+# Sets the size of the tube audit file
+tube.auditorSize=100MB
+
+# Adds site to tube subjects for analytics requests
+AnalyticsService.site=
+
+def env_gemfire_locators = require("")
+def env_gemfire_mcast_port = require("0")
+def env_gemfire_query_verbose = require("false")
+
+gemfire.cache-xml-file={@env_prop_dir}/cache.xml
+
+#=======================================================================================================================
+# Access/Request log configuration
+#=======================================================================================================================
+ncsa.log.enabled=true
+ncsa.log.file={@env_log_dir}/{@installName}-yyyy_mm_dd-access.log
+ncsa.log.retaindays=10
+ncsa.log.append=true
+ncsa.log.extended=true
+ncsa.log.timezone=UTC
+
+#=======================================================================================================================
+# Pingfed configuration
+#=======================================================================================================================
+def oauth_enabled = require("{%env-pingfed-enabled}", "false")
+def oauth_base_url = require("{%env-pingfed-url}", "{@portcullisURL}")
+def oauth_base_url_external = require("{%env-pingfed-url-external}", "{@oauth_base_url}")
+def oauth_redirect_url_template = require("{%env-pingfed-redirect-url-template}", "https://{0}/callback")
+
+service.oauth.enabled={@oauth_enabled}
+service.oauth.baseurl={@oauth_base_url}
+service.oauth.baseurl.external={@oauth_base_url_external}
+service.oauth.scope=openid
+service.oauth.redirect_url.template={@oauth_redirect_url_template}
+service.oauth.clientid=quo
+
+# This should always be false except for DEV when testing TS->QUO SSO through embedded browser
+service.oauth.passthrough_sso.enabled=false
+
+# This isn't used when there is a password file present
+service.oauth.client.obo_password=NOPASSWD
+
+# Increase PingFed state cookie timeout to one hour
+OAuthLoginFilter.oauthStateCookieTimeoutSeconds=3600
+
+# Use secure cookie for Oauth state
+OAuthLoginFilter.useSecureOauthStateCookie=true
+
+HttpServletRequestUtils.excludedForSsl=localhost,127.0.0.1,tsbox.dev.tradingscreen.com:8090
+
+#=======================================================================================================================
+# Hibernate configuration
+#=======================================================================================================================
+# password defined in {%passwordFile} with property key: database-user.${hibernate.connection.username}.password
+hibernate.connection.username=PWM
+hibernate.connection.url=jdbc:mariadb://db-reporting-1:3008/reporting
+hibernate.connection.isolation=2
+
+#=======================================================================================================================
+# JAVASCRIPT UI VARIABLES (see com.tradingscreen.tsnext.common.server.uiProperties.UiPropertiesServlet)
+#=======================================================================================================================
+ui.pingfed.enabled={@oauth_enabled}
+ui.pingfed.pwdchange.url={@oauth_base_url_external}/ping-auth/ext/pwdchange/Identify?AdapterId=SesameAdapter
+
+#=======================================================================================================================
+# TAP Authenticator
+#=======================================================================================================================
+tapAuthenticator.enabled=false
+tapAuthenticator.username=
+
+#=======================================================================================================================
+# TICKET
+#=======================================================================================================================
+Ticket.VONTOBEL-UNAVAILABLE.supportedRoutingTypes=
+
+#=======================================================================================================================
+# FX
+#=======================================================================================================================
+
+# FX broker information, format should be <branchId>:<etiId>:[RFQ|RFS],<branchId>:<etiId>:[RFQ|RFS],...
+DefaultFXStreamingQuotesServices.availableBrokers={@fx_brokers_available}
+LynxRFSFXQuotesProvider.SAXO-UNAVAILABLE.supportedPairs={%env-saxo-otc-ccy-pairs}
+#                                                            v Comma separated list of order types v
+LynxRFSFXQuotesProvider.SAXO-UNAVAILABLE.supportedOrderTypes=SPOT
+# This is just a list of branch ids separated by comma
+DefaultFXStreamingQuotesService.simulatedBrokers=TS-SS
+
+#=======================================================================================================================
+# WHITELABEL SSO
+#=======================================================================================================================
+WhiteLabel.ZKB.logoutURL=
+WhiteLabel.VARO_ENERGY.logoutURL=
+
+#=======================================================================================================================
+# SAML2 SSO
+#=======================================================================================================================
+
+ssoRedirect={@ssoRedirect}
+sso.vontobel.saml_properties = {@vontobel_saml_properties}
+sso.vontobel.logout_url={@vontobel_logout_url}
+sso.vontobel_operator.saml_properties = {@vontobel_operator_saml_properties}
+sso.vontobel_operator.logout_url={@vontobel_operator_logout_url}
+sso.varo.saml_properties = {@varo_saml_properties}
+sso.varo.logout_url={@varo_logout_url}
+
+#=======================================================================================================================
+# CUSTOM OBO
+#=======================================================================================================================
+DefaultAdminService.vontobelOperatorBranches=
+
+#=======================================================================================================================
+# Derived from svn://svn.dev.tradingscreen.com/repos/common-app-props/trunk/src/main/bedlam/templates/prop/gemfire.prop
+#=======================================================================================================================
+
+#
+# See http://www.gemstone.com/docs/6.0.1/product/docs/html/Manuals/SystemAdministratorsGuide/wwhelp/wwhimpl/common/html/wwhelp.htm#context=SystemAdministratorsGuide&file=sysConfig.4.6.html
+#
+
+# A symbolic name used to identify the system member.
+gemfire.name={@installName}
+
+# The list of locators used by system members to communicate with running locators. The list must
+# include all locators currently in use, and must be configured consistently for every member of
+# the distributed system. If the list is empty, locators are not used.
+gemfire.locators={@env_gemfire_locators}
+
+# If set, automatically starts a locator in the current process when the member connects to the distributed
+# system and stops the locator when the member disconnects. To use, specify the locator with an optional
+# address or host specification and a required port number. If you only specify the port, the address assigned
+# to the member is used for the locator. If not already there, this locator is automatically added to the list
+# of locators in this set of gemfire properties.
+gemfire.start-locator=
+
+# The multicast port used to communicate with other members of the distributed system. If zero, multicast
+# is disabled for both member discovery and distribution.
+gemfire.mcast-port={@env_gemfire_mcast_port}
+
+# Specifies the network adapter card the cache binds to for peer-to-peer communication.
+# An empty string (the default) causes the member to listen on the default card for the machine
+gemfire.bind-address=
+
+# Specifies whether sockets are shared by the system member's threads. If set to true, threads share, and
+# a minimum number of sockets are used to connect to the distributed system
+gemfire.conserve-sockets=false
+
+# If true, instructs the system to detect and handle splits in the distributed system, typically caused
+# by a partitioning of the network where the distributed system is running
+# NOTE: Data stored in TWNext cluster is transient in nature and does not require split-brain detection
+gemfire.enable-network-partition-detection=false
+
+# The timeout interval, in milliseconds, used to determine whether another system member is alive. When
+# another member appears to be gone, GemFire tries to contact it twice before quitting. This property sets
+# the timeout interval between each of these attempts.
+# Valid values are in the range 1000..600000. Default: 5000
+gemfire.member-timeout=5000
+
+# The number of seconds a distributed message can wait for acknowledgment before it sends an alert to
+# signal that something might be wrong with the system member that is unresponsive. After sending this
+# alert the waiter continues to wait. The alerts are logged in the system member's log as warnings.
+# Legal values are in the range 0..2147483647. Default: 15
+gemfire.ack-wait-threshold=15
+
+# Sends a severe warning alert to members in the distributed system, indicating that the member may be
+# disconnected from the distributed system if they do not respond quickly enough. This time period begins
+# after the ack-wait-threshold has elapsed.
+# Default: 0
+# This is especially helpful in cases when one of the members process is suspended such as heap dump/GC or
+# under debugging. Without this setting members will block for 10 minutes on a synchronous put for example
+# when redundancy is > 0 or replicated/distributed-ack/etc Regions are used.
+gemfire.ack-severe-alert-threshold=1
+
+#
+# Log Configuration
+#
+# The level of detail of the messages written to the system member's log. Valid values are fine, config,
+# info, warning, error, severe, and none. Setting log-level to one of the ordered levels causes all messages
+# of that level and greater severity to be printed. Lowering the log-level reduces system resource
+# consumption while still providing some logging information for failure analysis.
+gemfire.log-level=config
+gemfire.security-log-level=config
+
+#
+# Statistics Configuration
+#
+# Enables statistics gathering. None of the other properties matter if this is not true.
+# Whether to collect and archive statistics on the member. If false, archiving is disabled and operating
+# system statistics are no longer updated. Turning statistics sampling off saves on resources, but it also
+# takes away potentially valuable information for ongoing system tuning and about unexpected system problems.
+# This setting does not apply to partitioned regions, where statistics are always enabled.
+gemfire.statistic-sampling-enabled=true
+
+# Enables time-based statistics for the distributed system and caching.
+gemfire.enable-time-statistics=false
+
+# The file to which a running system member writes statistic samples. An empty string disables statistic
+# archiving. The .gz suffix causes this archive file to be compressed. To archive statistics without
+# compression, omit the .gz suffix. You can view archived statistics with the 'gemfire stats' command.
+# we disable this for now since there is a bug in GemFire where none of the statistics files are deleted on file rolling.
+gemfire.statistic-archive-file=
+
+# The maximum size (in megabytes) of a single statistic archive file. Once this limit is exceeded, a new
+# statistic archive file is created, and the current archive file becomes inactive. If set to zero,
+# file size is unlimited.
+gemfire.archive-file-size-limit=20
+
+# The maximum size (in megabytes) of all inactive statistic archive files combined. If this limit is
+# exceeded, inactive archive files are deleted, oldest first, until the total size is within the limit.
+# If set to zero, disk space usage is unlimited.
+gemfire.archive-disk-space-limit=200
+
+# The rate, in milliseconds, at which statistics are sampled. Operating system statistics are only updated
+# when a sample is taken. If statistic archiving is enabled then these samples are written to the archive.
+# Valid values are in the range 100..60000. Lowering the sample rate for statistics reduces system resource
+# use while still providing some statistics for system tuning and failure analysis.
+gemfire.statistic-sample-rate=60000
+
+# Query execution can potentially take a long time depending on data size and query complexity. The system
+# property "gemfire.Cache.MAX_QUERY_EXECUTION_TIME" can be set to define the maximum time allowed for a query
+# to complete its execution. If query execution time exceeds "gemfire.Cache.MAX_QUERY_EXECUTION_TIME", then the
+# query is canceled and QueryExecutionTimeoutException is thrown back to the caller, if the execution is local to
+# the VM. If the canceled query was initiated by a GemFire client, then a QueryException is thrown on the client
+# with its cause set to QueryExecutionTimeoutException. This timeout does not account for the time taken to construct
+# the results after execution completes and the results returned to the caller. In milliseconds.
+gemfire.Cache.MAX_QUERY_EXECUTION_TIME=45000
+
+# Disable moving primaries during redundancy recovery on member startup for partitioned regions. This is very important. We don't
+# want primary copy to be rebalanced from underneath the service. It must be under our control when to rebalance.
+gemfire.DISABLE_MOVE_PRIMARIES_ON_STARTUP=true
+
+#GemFire 6.6.2 introduces a new serialization format for enums, BigInteger, BigDecimal, UUID, and Timestamp object types. To ensure compatibility with older
+#GemFire processes, you can use the system property gemfire.serializationVersion to specify the older format version. The value of this property is a GemFire
+#product version. Valid values are strings that begin with "6.6.0" or "6.6.1"-- any other strings throw an exception. If you have clients or servers running
+#both 6.6.0 and 6.6.1, set the value to the oldest version. For example, to be safe during a rolling upgrade from 6.6.1 to 6.6.2, set
+#-Dgemfire.serializationVersion=6.6.1 on each 6.6.2 member. Ater all members (including clients) have been upgraded to 6.6.2, you can remove or
+#unset this property. Removing this property allows you to take advantage of the optimized serialization performance.
+gemfire.serializationVersion=6.6.0
+
+#Identifier used to distinguish messages from different distributed systems. Set this to different values for different systems
+#in a multi-site (WAN) configuration. This is required for Portable Data eXchange (PDX) data serialization. This setting must
+#be the same for every member in the same distributed system and unique to the distributed system within the WAN installation.
+#-1 means no setting. Valid values are integers in the range -1...255.
+gemfire.distributed-system-id=-1
+
+#You can debug a specific query at the query level by adding the <trace> keyword before the query string that you want to debug.
+#If you want to enable debugging for all queries, you can enable query execution logging by setting a System property.
+gemfire.Query.VERBOSE={@env_gemfire_query_verbose}
+
+#
+# License configuration (post 6.6 version)
+#
+gemfire.license-application-cache=
+gemfire.license-data-management=W10AJ-4W40J-4894R-0MAA6-3HVP1, R50CJ-4W49L-0804R-0N3F6-AXC45, WM4CL-4W64L-4814J-0N3L2-C8LP5
+gemfire.license-working-dir={@installDir}
+
+google.secret.blockdaemon.apikeysecretname=service_blockdaemon_api-key
+blockdaemon.platforms=bitcoin,algorand,ethereum,bitcoincash,diem,dogecoin,litecoin,near,oasis,polkadot,solana,stellar,terra,tezos,xrp
+blockdeamon.ProxyHost=
+blockdeamon.ProxyPort=
+userStateGuiceAdapter.noPositions=0002,0003

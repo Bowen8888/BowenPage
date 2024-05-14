@@ -1,0 +1,55 @@
+	docker-compose --env-file ~/tsbox2config/.env up -d
+
+	docker-compose stop
+
+list running containers
+	docker ps
+
+To run local Amoeba
+	docker stop amoeba-1-a
+	docker rm amoeba-1-a
+	check network:
+		docker network ls
+	docker run --name amoeba-1-a -e REMOTE_HOST=host.docker.internal -e REMOTE_PORT=40011 -e LOCAL_PORT=40011 --network=tsbox2_default marcnuri/port-forward
+Option2 to run amoeba locally:
+	Go to Intellij --> Maven --> amoeba service --> plugins --> docker --> build. 
+	This will build an image for you.
+	Go to docker-compose file, change the amoeba setting from nightly to latest. 
+	Start docker compose.
+remove everything
+	docker compose down
+
+remove gemfire data (In windows powershell)
+	docker compose exec tsom-1-a /bin/bash -c "rm -rf ~/data/amoeba-1-a;echo deleted amoeba data"
+	docker compose exec tsom-1-a /bin/bash -c "rm -rf ~/data/lynx2-1-a;echo deleted lynx data"
+	docker compose exec tsom-1-a /bin/bash -c "rm -rf ~/data/pm-1-a;echo deleted pm data"
+	docker compose --env-file C:\Users\btian\tsbox2config/.env exec tsom-1-a /bin/bash -c "rm -rf ~/data/disco-1-a;echo deleted disco data"
+remove only one app from a container
+	docker compose rm --stop amoeba-1-a
+
+
+docker container prune -f;
+docker network prune -f;
+docker image prune -f;
+docker volume prune -f;
+docker system prune;
+
+Redirect memento
+	docker run --name mementos-1-a -e REMOTE_HOST=host.docker.internal -e REMOTE_PORT=4030 -e LOCAL_PORT=4030 --network=tsbox2_default marcnuri/port-forward
+
+Check inside of docker image (can get image id by docker images) in power shell
+	docker run -ti (image id) /bin/bash
+
+Check inside of docker running container in power shell
+	docker compose exec vervet-1-a /bin/bash
+
+Check container ip:
+	docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Name }}" <containerid>
+
+Create amoeba image
+	Go to amoeba server folder
+	Make sure vpn is on
+	mvn package docker:build -Ddocker.image.version=nightly -DskipTests
+
+Remove Image
+	 docker rmi tsimagine/amoeba:nightly

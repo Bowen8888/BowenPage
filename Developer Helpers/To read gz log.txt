@@ -1,0 +1,3 @@
+Go to ubuntu.
+cd into the file location.
+zless quo-1-a.log.4.gz

@@ -1,0 +1,46 @@
+1. get tar file from 
+	http://nexus1.dev.tradingscreen.com:8081/nexus/repository/releases/com/tradingscreen/ash/ash/1.10/ash-1.10-bin.tar
+2. get misc repo from 
+	https://git.dev.tradingscreen.com:7990/users/mtepp/repos/misc/browse
+3. cd into misc/src/main/docker/ash, and put the tar file in here.
+4. Build the image
+	docker build -t myrepo/ash .
+5. Run ash
+	docker run --rm -ti myrepo/ash
+
+Note: if you are using git bash
+	winpty docker run --rm -ti myrepo/ash
+INSTALL ASH
+1. download the tar from above
+2. tar -x -f the_tar_file
+3. cd into the tared folder into bin
+4.sed -i "s/javaVersion=.*$/javaVersion=8/g" install
+5. Now should be able to use ash
+
+USE ASH IN UATDEV
+btian@ts05766:/mnt/c/Users/btian/Downloads/ash-1.10/bin$ ./ash
+To get Amoeba version 
+	1. ash amoeba-1-a.UATPROD.ny2-lab-030.uatprod.tradingscreen.com
+	2. version
+Use rup :grep -i sesame to find available sesame services
+
+
+Query from my local
+
+1.PowerShell->docker run -ti --rm tsimagine/ash:nightly /ash/bin/ash -s ticktalk://host.docker.internal:7595 -u tsclient
+2.do "rup" to get a list of services
+3.ash mementos from the list above
+4.do "man gf-query"
+5.a do gf-query "SELECT \* from /Amoeba/SomeRegion"
+5.b or do
+gf-query "select value from /Lynx_ClOrdIdMappingRegion.entrySet where value.getCreationTime.toString < '2018-10-01' and value.isDeactivated = true"
+
+Check amoeba region in container
+	gf-display-regions :grep OnboardWorkflow
+USE ASH IN TSBOX2
+	POWERSHELL
+	docker run -ti --rm tsimagine/ash:nightly /ash/bin/ash -s ticktalk://host.docker.internal:7595 -u tsclient
+
+ASH in Docker
+docker run -ti --rm tsimagine/ash:nightly /ash/bin/ash --ubtian
+use windows password

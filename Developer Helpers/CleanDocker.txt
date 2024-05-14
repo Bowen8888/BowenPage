@@ -1,0 +1,5 @@
+Run the following in order:
+	docker run --rm --privileged --pid=host docker/desktop-reclaim-space
+	docker rmi docker/desktop-reclaim-space
+	wsl --shutdown
+	Optimize-VHD -Path ${env:LOCALAPPDATA}\Docker\wsl\data\ext4.vhdx -Mode Full

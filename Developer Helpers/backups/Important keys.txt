@@ -1,0 +1,17 @@
+Windows app password
+	rhbbfvlpcrtyczrm
+Two-Factor Authentication Backup Codes (Slack)
+	482876
+	456023
+	475460
+	199584
+	242806
+	220036
+	141225
+	419576
+	822518
+	814237
+Maven encrypted master password
+	zVDUfKLpbEoHiWnXIeIijNzdcMJxo3T2BJkgJuAG9AA=
+Maven encrypted windows password
+	XX2R8CeiixoHgy/x7gHw5DW6jemU2xp+0Q5BBOnh1lo=

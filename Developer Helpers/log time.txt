@@ -1,0 +1,9 @@
+Standup, demo, retro - PM-108
+Dev environment setup - PM-138
+1-2-1 PM-136
+Bank holidays PM-199
+Personal vacations PM-200
+Training - PM-135
+Release management - PM-137
+To see all:
+https://imaginesoftware.atlassian.net/wiki/spaces/DEV/pages/21360443411/Development+JIRA+Time-Sheets

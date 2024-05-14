@@ -1,0 +1,5 @@
+1.Liquidnet in counterparty (branch level). 
+2.User in community (assign login in community).
+3.Community in branch 0001.
+4.Have account in buy-side accounts of liquidnet.
+5.go to login --> trade entitlement --> add liquidnet as broker entity then turn on all venues.

@@ -1,0 +1,6 @@
+1.cartography
+2.docker-compose.yml
+2.Go to the service repo.
+Go to docker.xml 
+In server. Run mvn package docker:build '-Ddocker.cartography.root=file:///home/ts/app/cartography'
+

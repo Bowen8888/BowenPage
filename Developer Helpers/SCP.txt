@@ -1,0 +1,4 @@
+scp vervet-server-1.0.0-SNAPSHOT-bin.tar.gz btian@staging.dev.tradingscreen.com:/staging/vervet
+
+
+cd /mnt

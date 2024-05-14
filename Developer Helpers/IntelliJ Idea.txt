@@ -1,0 +1,5 @@
+Maven (compilation errors related)
+ run this maven goal, mvn idea:idea
+
+When you cannot download source from IntelliJ, run the following in the repo containing the pom with the dependency you want.
+	mvn dependency:sources

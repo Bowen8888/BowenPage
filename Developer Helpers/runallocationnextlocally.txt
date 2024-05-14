@@ -1,0 +1,15 @@
+https://imaginesoftware.atlassian.net/wiki/spaces/DEV/pages/21397440035/TSNext+Setting+Up+Your+Local+Environment
+
+
+go to \prop\TSNEXTAppServer.pprop
+	set def app_wars = require("rfqnext-webclient|dealernext-webclient|elocate-webclient|ioinext-webclient|reportnext-webclient|focus-webclient|bouncer-webclient|galaxysheets-webclient|tap-webclient|finext-webclient|navnext-webclient|mobile-webclient|basketnext-webclient|galaxysheets-app|diagnostics-webclient|datasmart-webclient|datasmart-app|cchen-app|cobrakai-app|cobrakai-webclient|risk-webclient|risk-app|insight-webclient|raw-data-webclient|allocationnext-app|../webclient-allocationnext")
+in run config TSNextAppServer 1-a
+	set -DloadFrom=app (if you don't need to run your local web client, use  =install)
+	working repository: the place where you clone tsnext
+
+
+webclient-allocationnext
+ npm install 
+ bower install
+ mvn install 
+ grunt build 

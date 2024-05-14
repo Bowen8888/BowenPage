@@ -1,0 +1,22 @@
+https://imaginesoftware.atlassian.net/wiki/spaces/DEV/pages/21364051130/Local+SupportPortal+Installation
+
+you need to clone this: https://git.dev.tradingscreen.com:7990/projects/SP/repos/portal/browse
+10:43
+create your own branch
+10:43
+update the amoeba version here: https://git.dev.tradingscreen.com:7990/projects/SP/repos/portal/browse/pom.xml
+10:44
+mvn install it
+10:44
+then clone this one: https://git.dev.tradingscreen.com:7990/projects/SP/repos/truegritplugin/browse
+10:44
+and run it locally in your IntelliJ
+10:45
+or build your own support portal docker container on top of your changes
+
+
+
+
+
+10:47
+have a look at this page for running the plugin locally: https://imaginesoftware.atlassian.net/wiki/spaces/DEV/pages/21390632658/Debugging+SupportPortal+Plugins

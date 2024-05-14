@@ -1,0 +1,2 @@
+1. if javascript debugged doesn't show up, mvn install assembly + portal
+2.

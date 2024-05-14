@@ -1,0 +1,5 @@
+"C:\Program Files\Java\jdk8u312-b07\bin\keytool.exe" -importcert -file tradingscreen_dev.cert -keystore "C:\Program Files\Java\jdk8u312-b07\jre\lib\security\cacerts"
+
+
+
+"C:\Program Files\Java\jdk8u312-b07\bin\keytool.exe" -list -v -keystore "C:\Program Files\Java\jdk8u312-b07\jre\lib\security\cacerts"

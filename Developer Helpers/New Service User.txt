@@ -1,0 +1,11 @@
+service accounts are different. They are found in sesame's service_account table. 
+There is a procedure to add them. For tsbox add your service account here like the others and you can copy the hash of existing user
+https://stash.dev.tradingscreen.com:7990/projects/SEC/repos/sesame/browse/src/main/resources/sql/dev_default_dataset.sql
+3:58
+and then add this user as regular user as well here https://stash.dev.tradingscreen.com:7990/projects/DOCK/repos/amoeba-dev-data/browse/dev-dataset/Login
+3:58
+this will make it permanent for tsbox
+4:02
+creating on the fly can be done also for testing:
+for service user case (not common) duplicate existing user in sesame db: service_account table
+for regular user, in admin plugin, bring up all users for 0001. Select tsclient and click copy. Then in sesame db, you have to reset force=1 to 0 for this new user and restart sesame to pick up the change right away. Try login in portal with new user

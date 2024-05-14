@@ -1,0 +1,3 @@
+cd into folder where bedlam pom is situated.
+mvn assembly:directory-inline
+mvn bedlam-mojo:build-prop-dev

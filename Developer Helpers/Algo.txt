@@ -1,0 +1,2 @@
+1. Check algo supports the asset class.
+2. Copy source file (in algo source object in object browser) from some other environment.

@@ -1,0 +1,6 @@
+when snapshots are not allowed
+	<bannedDependencies>
+		<excludes>
+                	<exclude>com.tradingscreen.amoeba:amoeba-client</exclude>
+                </excludes>
+	</bannedDependencies>

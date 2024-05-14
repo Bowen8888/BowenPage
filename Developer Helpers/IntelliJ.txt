@@ -1,0 +1,9 @@
+Client
+	1.Settings -> Java Compiler
+		Uncheck "Use compiler from module target JDK when possible.
+		set project bytecode version to 17
+		set swing, client-common, xtable, shootsandladders, ssoms to 17
+	2.In Project structures 
+		-> Modules, set client core to 1.8 both source and dependencies
+		-> Project, set sdk to temurin 17
+	3. Run Tradesmart for Win with Java 17

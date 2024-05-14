@@ -1,0 +1,46 @@
+Putty:ny2-laa-011.dev.tradingscreen.com
+Prod:btian@ny2-lia-001.prod.tradingscreen.com
+UATprod: btian@ny2-lia-001.uatprod.tradingscreen.com
+UATDEV: btian@ny2-lia-001.uatdev.tradingscreen.com
+User:btian
+Password:6X9SV&wGO9Zn
+
+Get Tsom log: 
+	ssh prod-tsom-1-a
+	cd /app/core/log
+List log files
+	ls -l tsom-19-a.log*
+
+Note: logs are sorted in decreasing order. The higher the number the longer it is captured. 
+To read log do  less tsom.log.1
+Inside less, can use "/" to search for a word. 
+
+ssh smartalloc-1-a
+
+/////////////////
+
+UATDEV: [USERNAME]@ny2-lia-001.uatdev.tradingscreen.com
+uatdev-tsom-0-a
+smartalloc-1-a
+uatdev-supportportal-1-a    /app/supportportal/log
+
+To find lynx instance from Fix message
+48 is sender comp id, 49 is target comp id
+Go to Lynx2 Session monitor and filter by these two columns.
+This should give you the instance and the eti id
+go to /app/lynx/log/eti/reallog/<etiid>/
+
+QUO UATDEV
+ny2-laa-029.internet.tradingscreen.com
+ny2-laa-030.internet.tradingscreen.com
+
+.gz files:
+use zless
+
+To get support portal server in ash 
+	1.btian@ts05766:/mnt/c/Users/btian/Downloads/ash-1.10/bin$ ./ash
+	2.rup :grep -i support.*UATPROD
+	3.You should see something like this supportportal.3.a.UATPROD.ny2-laa-006.uatprod.tradingscreen.com
+	4.Take the last part ny2-laa-006.uatprod.tradingscreen.com
+	5.ssh into uatprod from host above
+	6.ssh into the support server

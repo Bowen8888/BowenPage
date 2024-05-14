@@ -1,0 +1,38 @@
+For Gateway (Buyer side, so create order)
+ Go to SP -> Lynx2 session monitor
+ Stop the one you want to connect.
+ Create new version. 
+ Set IP filter to your local ip.
+ Match session port to the one in cfg file.
+ Session ip empty.
+ Send = TS
+ Target = MANUALWG
+ Save
+ Action -> activate
+ Back to monitor and start
+
+ In cfg
+ Set Sender = MANUALWG Target = TS
+ SocketConnectHost = 127.0.0.1
+ Set the resource to the correct resource path.
+ Match port to lynx
+
+Then go to fix fire load cfg file and connect.
+
+For Line Handling (The Sell side)
+ Go to SP -> Lynx2 session monitor
+ Stop the one you want to connect.
+ Create new version
+ Send = TS
+ Target = LIQUIDNET
+ set session ip to your local ip
+ Save
+ Activate
+ Start in monitor
+
+ In cfg
+ Send = LIQUIDNET
+ Target = TS
+ SocketConnectHost = 0.0.0.0
+ Set the resource to the correct resource path.
+ Match port to lynx
