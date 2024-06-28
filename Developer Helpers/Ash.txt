@@ -41,6 +41,6 @@ USE ASH IN TSBOX2
 	POWERSHELL
 	docker run -ti --rm tsimagine/ash:nightly /ash/bin/ash -s ticktalk://host.docker.internal:7595 -u tsclient
 
-ASH in Docker
-docker run -ti --rm tsimagine/ash:nightly /ash/bin/ash --ubtian
-use windows password
+ASH in Docker (Powershell)
+	docker run -ti --rm tsimagine/ash:nightly /ash/bin/ash --ubtian
+	use windows password
