@@ -31,7 +31,7 @@ Query from my local
 2.do "rup" to get a list of services
 3.ash mementos from the list above
 4.do "man gf-query"
-5.a do gf-query "SELECT \* from /Amoeba/SomeRegion"
+5.a do gf-query "SELECT \* from /Amoeba/PriceSourceSelector"
 5.b or do
 gf-query "select value from /Lynx_ClOrdIdMappingRegion.entrySet where value.getCreationTime.toString < '2018-10-01' and value.isDeactivated = true"
 

@@ -20,12 +20,21 @@ remove everything
 	docker compose down
 
 remove gemfire data (In windows powershell)
-	docker compose --env-file C:\Users\btian\tsbox2config/.env exec tsom-1-a /bin/bash -c "rm -rf ~/data/amoeba-1-a;echo deleted amoeba data"
 	docker compose --env-file C:\Users\btian\tsbox2config/.env exec tsom-1-a /bin/bash -c "rm -rf ~/data/sesame-1-a;echo deleted sesame data"
 	docker compose --env-file C:\Users\btian\tsbox2config/.env exec tsom-1-a /bin/bash -c "rm -rf ~/data/lynx2-1-a;echo deleted lynx data"
 	docker compose --env-file C:\Users\btian\tsbox2config/.env exec disco-1-a /bin/bash -c "rm -rf ~/data/portcullis-1-a;echo deleted portcullis data"
 	docker compose --env-file C:\Users\btian\tsbox2config/.env exec tsom-1-a /bin/bash -c "rm -rf ~/data/pm-1-a;echo deleted pm data"
 	docker compose --env-file C:\Users\btian\tsbox2config/.env exec tsom-1-a /bin/bash -c "rm -rf ~/data/disco-1-a;echo deleted disco data"
+
+restore amoeba from db
+	Go to amoeba container	
+		docker compose --env-file C:\Users\btian\tsbox2config/.env exec amoeba-1-a /bin/bash
+	Go to data
+		cd ~/data
+	Delete amoeba-1-a
+		rm -rf amoeba-1-a
+		exit
+	Stop and Delete amoeba container and restart (Maybe no need to delete container)
 
 remove only one app from a container
 	docker compose rm --stop amoeba-1-a
