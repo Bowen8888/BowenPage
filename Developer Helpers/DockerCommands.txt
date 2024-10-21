@@ -65,3 +65,5 @@ Create amoeba image
 
 Remove Image
 	 docker rmi tsimagine/amoeba:nightly
+Create docker image
+	mvn package docker:build -DskipTests

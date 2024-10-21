@@ -1,5 +1,6 @@
 To set heap limit
 export NODE_OPTIONS="--max-old-space-size=8192"
+set NODE_OPTIONS="--max-old-space-size=8192"
 
 To see heap limit
 node -e 'console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))'

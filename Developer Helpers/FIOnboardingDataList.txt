@@ -33,22 +33,31 @@ PriceProviderSupport
 ______________________________
 
 Daily Version:
-Table 'AqueductInstanceConfiguration' (42 rows)) copied
+Table 'AqueductInstanceConfiguration' (44 rows)) copied
 Table 'AqueductInstanceConfiguration_PriceProviderPlugins' (315 rows)) copied
+Table 'Branch' (5897 rows)) copied
+Table 'ETI' (6968 rows)) copied
+Table 'Individual' (22511 rows)) copied
 Table 'OnboardWorkflowMapping' (38 rows)) copied
 Table 'OnboardWorkflowMapping_BranchIds' (1 rows)) copied
-Table 'OnboardWorkflowMapping_Contexts' (148 rows)) copied
-Table 'OnboardWorkflowMapping_RealTimeHandler' (36 rows)) copied
-Table 'OnboardWorkflowMapping_RestHandler' (35 rows)) copied
+Table 'OnboardWorkflowMapping_Contexts' (149 rows)) copied
+Table 'OnboardWorkflowMapping_RealTimeHandler' (37 rows)) copied
+Table 'OnboardWorkflowMapping_RestHandler' (36 rows)) copied
 Table 'OnboardWorkflowMapping_TsunamiHandler' (17 rows)) copied
-Table 'PriceEntitlement' (18011 rows)) copied
-Table 'PriceEntitlement_VenueGroupIds' (18012 rows)) copied
-Table 'PriceSourceSelector' (2857 rows)) copied
-Table 'PriceSubjectTemplate' (622 rows)) copied
-Table 'PricingSourceSelector' (1593 rows)) copied
+Table 'PriceEntitlement' (17970 rows)) copied
+Table 'PriceEntitlement_VenueGroupIds' (17971 rows)) copied
+Table 'PriceSourceSelector' (2843 rows)) copied
+Table 'PriceSubjectTemplate' (623 rows)) copied
+Table 'PricingSourceSelector' (1605 rows)) copied
 Table 'PricingSubjectTemplate' (182 rows)) copied
-Table 'Venue' (984 rows)) copied
-Table 'VenueGroup' (36214 rows)) copied
-Table 'VenueGroup_MemberIds' (2172046 rows)) copied
-17 table(s) copied
+Table 'TSClientPreferences' (6909 rows)) copied
+Table 'Venue' (985 rows)) copied
+Table 'VenueGroup' (36223 rows)) copied
+Table 'VenueGroup_MemberIds' (2172152 rows)) copied
+Table 'WebTechCluster' (3 rows)) copied
+22 table(s) copied
+
+
+
+
 
